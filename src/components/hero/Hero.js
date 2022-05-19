@@ -1,8 +1,16 @@
 import React from 'react'
 import Header from '../header/Header';
 import tw from "twin.macro";
+import styled from "styled-components";
+import hero from '../../assets/hero.jpg'
 
-const Container = tw.div`relative`;
+const Container = styled.div`
+    position:relative;
+    background-image: url(${hero});
+    padding: 200px 0 180px;
+    background-size: cover;
+`;
+
 const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
 const LeftColumn = tw.div`relative lg:w-5/12 text-center max-w-lg mx-auto lg:max-w-none lg:text-left`;
 const RightColumn = tw.div`relative mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end`;
@@ -28,7 +36,6 @@ const Hero = () => {
           </LeftColumn>
           <RightColumn>
             <IllustrationContainer>
-              <img tw="min-w-0 w-full max-w-lg xl:max-w-3xl" /* src={DesignIllustration} */ alt="Design Illustration" /> {/* testing poner img */}
             </IllustrationContainer>
           </RightColumn>
         </TwoColumn>
