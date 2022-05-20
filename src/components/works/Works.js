@@ -16,7 +16,6 @@ import { Works } from '../../helpers/Data'
 
 const TabContent = tw(motion.div)`mt-6 flex flex-wrap sm:-mr-10 md:-mr-6 lg:-mr-12`;
 
-
 const CardContainer = tw.div`mt-10 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 sm:pr-10 md:pr-6 lg:pr-12`;
 const Card = tw(motion.a)`bg-gray-200 rounded-b block max-w-xs mx-auto sm:max-w-none sm:mx-0`;
 const CardImageContainer = styled.div`
@@ -30,15 +29,9 @@ const CardHoverOverlay = styled(motion.div)`
 `;
 const CardButton = tw(PrimaryButtonBase)`text-sm`;
 
-export default ({
-    tabs = {
-        Main: getRandomCards(),
-        Soup: getRandomCards(),
-        Desserts: getRandomCards()
-    }
-}) => {
-    const tabsKeys = Object.keys(tabs);
-    const [activeTab, setActiveTab] = useState(tabsKeys[0]);
+export default () => {
+
+
 
     return (
         <Container>
@@ -46,21 +39,7 @@ export default ({
                 <SectionHeading>
                     Obras
                 </SectionHeading>
-                <TabContent
-                    variants={{
-                        current: {
-                            opacity: 1,
-                            scale: 1,
-                            display: "flex",
-                        },
-                        hidden: {
-                            opacity: 0,
-                            scale: 0.8,
-                            display: "none",
-                        }
-                    }}
-                    transition={{ duration: 0.4 }}
-                >
+                <TabContent>
                     {Works.map((card, index) => (
                         <CardContainer key={index}>
                             <Card className="group" href={card.url} initial="rest" whileHover="hover" animate="rest">
