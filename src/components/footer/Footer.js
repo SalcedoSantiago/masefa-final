@@ -5,7 +5,13 @@ import styled from "styled-components";
 const LogoImage = "https://treact.owaiskhan.me/static/media/logo.2c489fc4.svg"
 
 
-const Container = tw.div`relative bg-gray-200 -mx-8 -mb-8 px-8`;
+const Container = styled.div`
+    background-color:#00235a ;
+    max-width: 100%;
+    color: white;
+`
+
+
 const FiveColumns = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20 flex flex-wrap justify-between`;
 
 const Column = tw.div`md:w-1/5`;

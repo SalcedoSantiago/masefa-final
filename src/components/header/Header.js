@@ -2,17 +2,18 @@ import React from 'react'
 import tw from "twin.macro";
 import styled from "styled-components";
 
-
-const NavLinks = tw.div`inline-block`;
-
-const Header = tw.header`bg-primary-200 lg:py-3`;
-
-const Container = tw.div`
-flex justify-between items-center
-max-w-screen-xl  container mx-auto`;
+import { PrimaryButton } from '../misc/Buttons';
+import {
+    Header,
+    NavLinksContainer,
+    NavLinks,
+    ContainerMxlarge,
+    ActionContainer,
+    Action,
+} from './HeaderElements'
 
 const DesktopNavLinks = tw.nav`
-md:hidden lg:flex flex-1 justify-between items-center
+md:hidden lg:flex flex-1 justify-between items-center flex-wrap
 `;
 
 const NavLink = tw.a`
@@ -32,66 +33,56 @@ const LogoLink = styled(NavLink)`
   ${tw`flex items-center text-gray-100 border-b-0 text-2xl! ml-0!`};
 
   img {
-    ${tw`w-10 mr-3`}
+    ${tw`mr-3 h-16`}
   }
 `;
 
 const StyledHeader = () => {
-
     const links = (
-        <NavLinks key={1}>
-            <NavLink href="/#">Sobre Mosotros</NavLink>
-            <NavLink href="/#">Blog</NavLink>
-            <NavLink href="/#">Pricing</NavLink>
-            <NavLink href="/#">Contact Us</NavLink>
-            <NavLink href="/#" tw="lg:ml-12!">
-                Login
-            </NavLink>
-            <PrimaryLink href="/#">Sign Up</PrimaryLink>
-        </NavLinks>
+        <NavLinksContainer key={1}>
+            <NavLinks>
+                <NavLink href="/#">Sobre Mosotros</NavLink>
+                <NavLink href="/#">Blog</NavLink>
+                <NavLink href="/#">Pricing</NavLink>
+                <NavLink href="/#">Contact Us</NavLink>
+                <NavLink href="/#" tw="lg:ml-12!">
+                    Login
+                </NavLink>
+                <PrimaryLink href="/#">Sign Up</PrimaryLink>
+            </NavLinks>
+        </NavLinksContainer>
     )
 
     const logoLink = (
         <LogoLink href="/">
-            <img /* src={logo} */ alt="" />
-            Treact
+            <img src="https://ld-wp73.template-help.com/wordpress/prod_11368/v2/wp-content/uploads/2021/07/logo.png" alt="" />
         </LogoLink>
     )
 
     return (
         <Header className="">
-            <Container>
-                <DesktopNavLinks>
+            <DesktopNavLinks>
+                <ContainerMxlarge>
                     {logoLink}
-                    {links}
-                </DesktopNavLinks>
-            </Container>
+                    <ActionContainer>
+                        <Action>
+                            <h2>(+1) 555 234-8765</h2>
+                            <span> Call us </span>
+                        </Action>
+                        <Action>
+                            <h2>(+1) 555 234-8765</h2>
+                            <span>Mail Us Now </span>
+                        </Action>
+                        <Action>
+                            <PrimaryButton>Contact us</PrimaryButton>
+                        </Action>
+                    </ActionContainer>
+                </ContainerMxlarge>
+                {links}
+            </DesktopNavLinks>
             {/* mobile here */}
         </Header>
     )
 }
 
 export default StyledHeader;
-
-// const collapseBreakPointCssMap = {
-//     sm: {
-//         mobileNavLinks: tw`sm:hidden`,
-//         desktopNavLinks: tw`sm:flex`,
-//         mobileNavLinksContainer: tw`sm:hidden`
-//     },
-//     md: {
-//         mobileNavLinks: tw`md:hidden`,
-//         desktopNavLinks: tw`md:flex`,
-//         mobileNavLinksContainer: tw`md:hidden`
-//     },
-//     lg: {
-//         mobileNavLinks: tw`lg:hidden`,
-//         desktopNavLinks: tw`lg:flex`,
-//         mobileNavLinksContainer: tw`lg:hidden`
-//     },
-//     xl: {
-//         mobileNavLinks: tw`lg:hidden`,
-//         desktopNavLinks: tw`lg:flex`,
-//         mobileNavLinksContainer: tw`lg:hidden`
-//     }
-// };

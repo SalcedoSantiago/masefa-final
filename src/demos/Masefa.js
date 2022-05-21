@@ -4,7 +4,6 @@ import Features from "../components/features/Features";
 // import AnimationRevealPage from "../helpers/AnimationRevealPage";
 
 const Masefa = () => {
-
     return (
         <>
             {/* <AnimationRevealPage> */}
@@ -14,7 +13,7 @@ const Masefa = () => {
             <Services />
             <GetStarted />
             <Works />
-            <TabCardThreeCol />
+            {/* <TabCardThreeCol /> */}
             <Footer />
             {/* </AnimationRevealPage> */}
         </>
