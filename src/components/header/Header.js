@@ -41,14 +41,10 @@ const StyledHeader = () => {
     const links = (
         <NavLinksContainer key={1}>
             <NavLinks>
-                <NavLink href="/#">Sobre Mosotros</NavLink>
-                <NavLink href="/#">Blog</NavLink>
-                <NavLink href="/#">Pricing</NavLink>
-                <NavLink href="/#">Contact Us</NavLink>
-                <NavLink href="/#" tw="lg:ml-12!">
-                    Login
-                </NavLink>
-                <PrimaryLink href="/#">Sign Up</PrimaryLink>
+                <NavLink href="/#">Home</NavLink>
+                <NavLink href="/#">Sobre Nosotros</NavLink>
+                <NavLink href="/#">Servcios</NavLink>
+                <NavLink href="/#">Contacto</NavLink>
             </NavLinks>
         </NavLinksContainer>
     )

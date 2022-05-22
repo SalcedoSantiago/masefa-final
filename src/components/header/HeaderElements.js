@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const Header = styled.header`
     width: 100%;
     min-height: 10rem;
@@ -29,7 +28,7 @@ export const NavLinks = styled.div`
 
 export const ActionContainer = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     gap: 10px;
     width: 75%;
