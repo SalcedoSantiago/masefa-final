@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import { Container, ContentWithPaddingXl, ThreeColumnContainer } from "../misc/Layouts.js";
+import { ContentWithPaddingXl, ThreeColumnContainer } from "../misc/Layouts.js";
 import { SectionDescription as Desc } from "../misc/Typography";
 import { PrimaryButton as PrimaryButtonBase, PrimaryButtonCenter } from "../misc/Buttons.js";
 
@@ -36,20 +36,10 @@ background-color: #808080;
 export const CardImageContainer = styled.div`
 ${props => css`background-image: url("${props.imageSrc}");`}
 height: 18rem;
--webkit-align-items: center;
--webkit-box-align: center;
--ms-flex-align: center;
 align-items: center;
--webkit-flex-direction: column;
--ms-flex-direction: column;
 flex-direction: column;
 display: flex;
--webkit-flex-wrap: wrap;
--ms-flex-wrap: wrap;
 flex-wrap: wrap;
--webkit-box-pack: center;
--webkit-justify-content: center;
--ms-flex-pack: center;
 justify-content: center;
 background-size: cover;
 `;

@@ -1,21 +1,23 @@
-
+import weldingFeatureOne from '../../assets/welding-1.png'
+import weldingFeatureTwo from '../../assets/welding-2.png'
+import weldingFeatureThree from '../../assets/welding-3.png'
 
 
 export const cards = [
     {
-        imageSrc: 'https://treact.owaiskhan.me/static/media/support-icon.f9253ffa.svg',
+        imageSrc: weldingFeatureOne,
         title: "Secure",
         description: "We strictly only deal with vendors that provide top notch security.",
         url: "#"
     },
     {
-        imageSrc: 'https://treact.owaiskhan.me/static/media/support-icon.f9253ffa.svg',
+        imageSrc: weldingFeatureTwo,
         title: "24/7 Support",
         description: "Lorem ipsum donor amet siti ceali placeholder text",
         url: "#"
     },
     {
-        imageSrc: 'https://treact.owaiskhan.me/static/media/support-icon.f9253ffa.svg',
+        imageSrc: weldingFeatureThree,
         title: "Customizable",
         description: "Lorem ipsum donor amet siti ceali placeholder text",
         url: "#"
