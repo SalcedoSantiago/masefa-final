@@ -3,83 +3,85 @@
  */
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { css } from "styled-components/macro"; //eslint-disable-line
 /**
  * Internal dependencies
  */
 import { Container as ContainerSection, ThreeColumnContainer as Columns } from '../misc/Layouts';
-
+import { SectionHeading } from '../misc/Headings'
+import { SectionDescription } from '../misc/Typography'
 
 
 // Main Container
 
 export const Container = styled(ContainerSection)`
-    margin-top:-120px;
-    max-width: 1024px;
+    max-width: 1080px;
     margin-left:  auto;
     margin-right:  auto;
     position: relative;
-    padding-bottom: 6rem;
+    padding: 6rem 0;
+`
+
+export const SubTitle = styled(SectionDescription)`
+    text-align: center;
 `
 
 
 export const ThreeColumnContainer = styled(Columns)`
-gap:0;
+gap: 1rem;
 `
 
-
-export const CardTitle = styled.span`
-    font-weight: bold;
-    font-size: 1.25rem;
-    color:#00235a;
-`
-export const CardDesc = styled.p`
-    margin-top: 1rem;
-    font-size: medium;
-    color: #506582;
-`
-
-export const FlipBoxCard = styled(motion.a)`
-    position: relative;
-    height: 18rem;
-    overflow-y: hidden;
+export const OverlayImage = styled.div`
     width: 50%;
-    padding: 2.5rem 2.5rem 3rem 2.5rem;
-    border-style: solid;
-    /* border-bottom-width: 3px; */
-    border-left: 2px solid #E2E8F0;
-    background-color: white;
-  
-  &:first{
-    border-left:none;
-  }
+    height: 18rem;
 
-  &:hover{
-      cursor:pointer;
-  }
+    ${props => css`
+        background-image: url("${props.imageSrc}");
+        background-size: cover;
+    `}
 
-  @media (min-width: 1024px) {
-      width: calc(33% - 1.5rem);
+    @media (min-width: 1024px) {
+        width: calc(33% - 1.5rem);
     }
-`;
+
+`
 
 
 export const CartContent = styled(motion.div)`
     /* padding: 2.5rem 2.5rem 3rem 2.5rem; */
+    height: 100%;
+    display: flex;
+    padding: 2.5rem 2.5rem 3rem 2.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #1E1D24 0%, #EF0B0B00 100%);
+    opacity: 1;
+    transition: 'background' 0s, border-radius 0.3s, opacity 0s;
 
-
-    img{
-        width:100px;
-        height:100px;
+    &:hover{
+        background-color: transparent;
+        background-image: linear-gradient(90deg, #FC5A0A 0%, #100E0F00 100%);
+        opacity: 1;
     }
- 
-
 `
-export const CardHoverOverlay = styled(motion.div)`
-    /* height: 18rem; */
-    padding-top: 1.5rem;
-    /* padding: 2rem 1.5rem 3rem 1.5rem; */
 
-`;
+export const CardTitle = styled(SectionHeading)`
+    font-weight: bold;
+    font-size: 1.5rem;
+    color:#FFFFFF;
+    font-weight: 600;
+    
+`
+export const CardDesc = styled.p`
+    margin-top: 1rem;
+    font-size: medium;  
+    color: #FFFFFF;
+`
+
+
+
 
 
 /*

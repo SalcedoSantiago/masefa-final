@@ -5,51 +5,29 @@ import { cards } from './helpers'
 import {
   Container,
   ThreeColumnContainer,
-  FlipBoxCard,
+  SubTitle,
   CartContent,
   CardTitle,
   CardDesc,
-  CardHoverOverlay,
+  OverlayImage
 } from './FeatureElements';
+import { SectionHeading } from '../misc/Headings'
 
 
 
 const Features = () => {
   return (
     <Container>
+      <SectionHeading>Soluciones que ofrecemos</SectionHeading>
+      <SubTitle> Our strengths in welding are focused around 3 core functions: Resistance Welding (spot welding, seam welding.)</SubTitle>
       <ThreeColumnContainer>
         {cards.map(({ title, description, imageSrc }, i) => (
-          <FlipBoxCard key={i} className="group" initial="rest" whileHover="hover" animate="rest">
-            <CartContent variants={{
-              hover: {
-                opacity: 0,
-                marginTop: '-18rem'
-              },
-              rest: {
-                opacity: 1,
-              }
-            }}
-              transition={{ duration: 0.3 }}
-            >
-              <img src={imageSrc} />
-              <CardTitle>{title}</CardTitle>
-            </CartContent>
-            <CardHoverOverlay
-              variants={{
-                hover: {
-                  opacity: 1,
-                  marginTop: '120px'
-                },
-                rest: {
-                  opacity: 0,
-                }
-              }}
-              transition={{ duration: 0.3}}
-            >
+          <OverlayImage key={i} imageSrc={imageSrc}>
+            <CartContent >
               <CardTitle>{title}</CardTitle>
               <CardDesc>{description}</CardDesc>
-            </CardHoverOverlay>
-          </FlipBoxCard>
+            </CartContent>
+          </OverlayImage>
         ))}
       </ThreeColumnContainer>
     </Container >

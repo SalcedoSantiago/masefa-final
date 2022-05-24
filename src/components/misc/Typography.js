@@ -1,4 +1,9 @@
-import tw from "twin.macro";
+import styled from 'styled-components';
 
 
-export const SectionDescription = tw.p`mt-4 text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 max-w-xl`;
+export const SectionDescription = styled.p`
+    text-align: center;
+    color: #686868;
+    font-size: 18px; 
+    margin: 0 4rem;
+`;

@@ -11,14 +11,20 @@ import { PrimaryButtonCenter as Button } from "../misc/Buttons";
 
 
 const Container = styled(ContainerBase)`
-padding: 4rem 0;
-background-color: #00235a;
+background-image: url(http://wp.workertm.com/tractour/wp-content/uploads/2020/10/testimonial-bg.jpg);
+background-size: cover;
 `
 
 const HeadingContainer = styled.div`
   margin-bottom: 2rem;
   color: white;
 `;
+
+const Overlay = styled.div`
+  background-color: #00000063;
+  padding: 6rem 0;
+`
+
 const Heading = styled(SectionHeading)`
   color: #fff;
   font-size: 3rem;
@@ -41,14 +47,16 @@ export default () => {
 
   return (
     <Container>
-      <ContentWithPaddingXl>
-        <HeadingContainer>
-          <Subheading>now</Subheading>
-          <Heading>looking for a reliable & stable partner?</Heading>
-          <Description>CONTACT US & LEARN MORE ABOUT US</Description>
-        </HeadingContainer>
-        <Button>Contact Us</Button>
-      </ContentWithPaddingXl>
+      <Overlay>
+        <ContentWithPaddingXl>
+          <HeadingContainer>
+            <Subheading>now</Subheading>
+            <Heading>looking for a reliable & stable partner?</Heading>
+            <Description>CONTACT US & LEARN MORE ABOUT US</Description>
+          </HeadingContainer>
+          <Button>Contact Us</Button>
+        </ContentWithPaddingXl>
+      </Overlay>
     </Container>
   );
 };

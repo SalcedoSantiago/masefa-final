@@ -1,10 +1,24 @@
+/**
+ * External dependencies
+ */
 import styled from "styled-components";
+
+/**
+ * Internal dependencies
+ */
 import { GridTwoColumns } from '../misc/Layouts';
 import { SectionDescription } from '../misc/Typography'
 import { Subheading as Headingsm } from '../misc/Headings'
 import { css } from "styled-components";
+// import hero from '../../assets/hero.jpg'
 
-import hero from '../../assets/hero.jpg'
+
+export const ContentCenter = styled.div`
+    min-height: 80vh;
+    padding: 200px 0 180px;
+    max-width: 1280px;
+    margin: 0 auto;
+`;
 
 export const Heading = styled.h1`
     font-size: 3.5rem;
@@ -18,18 +32,13 @@ export const Heading = styled.h1`
     `}
 `;
 
-export const ContentCenter = styled.div`
-    min-height: 80vh;
-    padding: 200px 0 180px;
-    max-width: 1280px;
-    margin: 0 auto;
-`
 export const TwoColumns = styled(GridTwoColumns)`
     justify-content: start;
     padding: 1rem 0;
-`
+`;
+
 export const ShortColumn = styled.div`
-`
+`;
 
 export const BackgroundImage = styled.div`
     position:relative;
@@ -40,8 +49,9 @@ export const BackgroundImage = styled.div`
 
 export const Subheading = styled(Headingsm)`
 margin-bottom: 1rem;
-`
+`;
 
 export const Paragraph = styled(SectionDescription)`
-    
-`
+    text-align: start;
+    margin-left: 0;
+`;

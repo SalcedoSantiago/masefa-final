@@ -25,9 +25,9 @@ const TwoColumn = styled(GridTwoColumns)`
 `
 
 const Heading = styled(SectionHeading)`
-    font-size: 38px;
+    font-size: 28px;
     font-weight: 700;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     text-align: center;
     @media (min-width: 768px){
         text-align: start;
@@ -42,6 +42,8 @@ const Subheading = styled(SubheadingBase)`
 
 const Description = styled(SectionDescription)`
      text-align: center;
+     margin: 0;
+     font-size: 14px;
     @media (min-width: 768px) {
         text-align: start ;
     }

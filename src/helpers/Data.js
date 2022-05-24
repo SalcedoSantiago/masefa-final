@@ -1,8 +1,6 @@
 const SupportIconImage = 'https://treact.owaiskhan.me/static/media/support-icon.f9253ffa.svg'
 
 
-
-
 export const Featured = [
     {
         imageSrc: 'https://treact.owaiskhan.me/static/media/support-icon.f9253ffa.svg',
@@ -26,34 +24,34 @@ export const Featured = [
 
 export const cardServices = [
     {
-        imageSrc: SupportIconImage,
+        imageSrc: 'https://img2.freepng.es/20180328/gge/kisspng-check-mark-cheque-clip-art-check-5abb46ab8338c7.0866514015222227635375.jpg',
         title: "Secure",
-        description: "We strictly only deal with vendors that provide top notch security."
+        description: "We provide discounts on the most popular services and on the season services, so you could definitely receive any help without delay."
     },
     {
-        imageSrc: SupportIconImage,
+        imageSrc: 'https://img2.freepng.es/20180328/gge/kisspng-check-mark-cheque-clip-art-check-5abb46ab8338c7.0866514015222227635375.jpg',
         title: "24/7 Support",
-        description: "We strictly only deal with vendors that provide top notch security."
+        description: "We provide discounts on the most popular services and on the season services, so you could definitely receive any help without delay."
     },
     {
-        imageSrc: SupportIconImage,
+        imageSrc: 'https://img2.freepng.es/20180328/gge/kisspng-check-mark-cheque-clip-art-check-5abb46ab8338c7.0866514015222227635375.jpg',
         title: "Customizable",
-        description: "We strictly only deal with vendors that provide top notch security."
+        description: "We provide discounts on the most popular services and on the season services, so you could definitely receive any help without delay."
     },
     {
-        imageSrc: SupportIconImage,
+        imageSrc: 'https://img2.freepng.es/20180328/gge/kisspng-check-mark-cheque-clip-art-check-5abb46ab8338c7.0866514015222227635375.jpg',
         title: "Reliable",
-        description: "We strictly only deal with vendors that provide top notch security."
+        description: "We provide discounts on the most popular services and on the season services, so you could definitely receive any help without delay."
     },
     {
-        imageSrc: SupportIconImage,
+        imageSrc: 'https://img2.freepng.es/20180328/gge/kisspng-check-mark-cheque-clip-art-check-5abb46ab8338c7.0866514015222227635375.jpg',
         title: "Fast",
-        description: "We strictly only deal with vendors that provide top notch security."
+        description: "We provide discounts on the most popular services and on the season services, so you could definitely receive any help without delay."
     },
     {
-        imageSrc: SupportIconImage,
+        imageSrc: 'https://img2.freepng.es/20180328/gge/kisspng-check-mark-cheque-clip-art-check-5abb46ab8338c7.0866514015222227635375.jpg',
         title: "Easy",
-        description: "We strictly only deal with vendors that provide top notch security."
+        description: "We provide discounts on the most popular services and on the season services, so you could definitely receive any help without delay."
     }
 ];
 
@@ -140,3 +138,47 @@ export const Works = [
         url: "#"
     }
 ];
+
+
+
+export const cardAbout = [
+    {
+        title: 'Siempre disponible',
+        desc: 'We accept requests and phone calls 24/7 so you could resolve any problem whenever you need. Our emergency team will be at your place...',
+        // Icon: FaClock
+    },
+    {
+        title: 'Agentes Calificados',
+        desc: 'All our team members are high-qualified, educated and skilled agents. All of them are being trained according to the latest technologies.All our team',
+        // Icon: FaAward
+    },
+    {
+        title: 'Precios razonables',
+        desc: 'Our prices are both fair and affordable for all people. We offer flexible discount system so you could use any service you need.',
+        // Icon: FaPiggyBank
+    },
+    {
+        title: 'Mejores ofertas',
+        desc: 'We provide discounts on the most popular services and on the season services, so you could definitely receive any help without delay.',
+        // Icon: FaRegStar
+    },
+]
+
+
+export const FAQS = [
+    {
+        question: "Nuestro Objetivo",
+        answer:
+            "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system."
+    },
+    {
+        question: "Nuestra vision",
+        answer:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+        question: "Nuestra mision",
+        answer:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+]
