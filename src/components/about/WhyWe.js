@@ -22,8 +22,10 @@ import {
     CartTitle,
     CartDesc,
     Question,
-    QuestionTitle
+    QuestionTitle,
+    FeatureCotainer
 } from './WhyWeElements'
+import { Columns } from "../works/WorksElements";
 
 
 const QuestionToggleIcon = motion(styled.span`
@@ -85,15 +87,19 @@ export default () => {
                     ))}
                 </QuestionColumn>
                 <Column>
-                    <CardsContainer>
+                    <Columns>
                         {CARD.map(({ title, desc, Icon }, index) => (
-                            <CardContent key={index}>
-                                <FaClock className="icon" />
-                                <CartTitle>{title}</CartTitle>
-                                <CartDesc>{desc}</CartDesc>
-                            </CardContent>
+                            <FeatureCotainer key={index}>
+                                <div className="columns">
+                                    <FaClock className="icon" />
+                                    <div className="content">
+                                        <h3>{title}</h3>
+                                        <p>{desc}</p>
+                                    </div>
+                                </div>
+                            </FeatureCotainer>
                         ))}
-                    </CardsContainer>
+                    </Columns>
                 </Column>
             </TwoColumn>
         </Container>

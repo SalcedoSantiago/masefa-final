@@ -1,11 +1,42 @@
 import styled from "styled-components";
 import tw from "twin.macro";
+import { css } from "styled-components/macro"; //eslint-disable-line
 
-export const Container = tw.div`relative`;
+export const Container = styled.section`
+    position: relative;
+`;
+
+export const Header = styled.div`
+    padding: 60px 0px 25px 0px;
+`
+
+
 export const ContentWithPaddingXl = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 export const ContentWithPaddingLg = tw.div`max-w-screen-lg mx-auto py-20 lg:py-24`;
 export const ContentWithVerticalPadding = tw.div`py-20 lg:py-24`;
 export const Content2Xl = tw.div`max-w-screen-2xl mx-auto`;
+
+
+
+export const GridColums = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    ${(props) => props.start && css` justify-content: start `};
+
+    > div {
+            width: 100%;
+    }
+ 
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+
+        > div {
+            width: calc(50% - 1rem);
+        }
+    }
+`
 
 
 
@@ -40,8 +71,6 @@ flex-direction: column;
 align-items: center;
 flex-wrap: wrap;
 margin: 0 auto;
-max-width: 1280px;
-padding-top: 4rem;
 gap: 1.5rem;
 
 @media (min-width: 1024px) {

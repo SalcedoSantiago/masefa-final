@@ -1,6 +1,3 @@
-import weldingFeatureOne from '../../assets/welding-1.png'
-import weldingFeatureTwo from '../../assets/welding-2.png'
-import weldingFeatureThree from '../../assets/welding-3.png'
 
 
 export const cards = [

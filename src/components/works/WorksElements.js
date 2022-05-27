@@ -12,14 +12,23 @@ padding-right: 2rem;
 margin: 0 auto;
 `
 
-export const SectionDescription = styled(Desc)`
-text-align: center;
-margin: 0 auto;
+export const SectionDescription = styled.p`
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 18px;
+
+    @media (min-width: 768px) {
+        margin-left:  10rem;
+        margin-right: 10rem;
+    }
+
 `
+
 
 export const Columns = styled(ThreeColumnContainer)`
 justify-content: start;
-max-width: 1024px;
+max-width: 1280px;
 `
 
 export const CardContainer = styled.div`
@@ -59,9 +68,10 @@ padding: 0px 50px 0px 50px;
 
 
 export const Paragraph = styled.p`
-font-size:14px;
-font-weight: 500;
-color: #fff;
+    font-size:14px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
 `
 
 

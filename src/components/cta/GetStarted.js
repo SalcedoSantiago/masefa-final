@@ -4,59 +4,51 @@ import styled from "styled-components";
 /**
  * Internal dependencies
  */
-import { SectionHeading, Subheading as SubheadingBase } from "../misc/Headings.js";
-import { Container as ContainerBase, ContentWithPaddingXl } from "../misc/Layouts";
-import { SectionDescription } from "../misc/Typography";
-import { PrimaryButtonCenter as Button } from "../misc/Buttons";
+import { GridColums, Column } from "../misc/Layouts";
+import { PrimaryButton } from "../misc/Buttons";
 
+const StyledContainer = styled.div`
+  margin: 30px 0;
+  background-color: var(--orange); 
+  padding: 65px 0px 65px 0px;
+  
+  .container{
+    max-width: var(--desktopL);
+    margin: 0 auto;
+    justify-content: space-between;
 
-const Container = styled(ContainerBase)`
-background-image: url(http://wp.workertm.com/tractour/wp-content/uploads/2020/10/testimonial-bg.jpg);
-background-size: cover;
+    > div{
+      width: auto;
+
+    }
+    .short-column{
+      width: auto;
+    }
+  }
+
+  .heading{
+    color:var(--white);
+    font-size: 40px;
+  }
+
+  p{
+    color:var(--white);
+  }
 `
-
-const HeadingContainer = styled.div`
-  margin-bottom: 2rem;
-  color: white;
-`;
-
-const Overlay = styled.div`
-  background-color: #00000063;
-  padding: 6rem 0;
-`
-
-const Heading = styled(SectionHeading)`
-  color: #fff;
-  font-size: 3rem;
-`
-
-const Subheading = styled(SubheadingBase)`
-  font-size: 1rem;
-  text-align:center;
-
-`;
-
-const Description = styled(SectionDescription)`
-  text-align: center;
-  margin: 0 auto;
-  max-width: 768px;
-`
-
 
 export default () => {
 
   return (
-    <Container>
-      <Overlay>
-        <ContentWithPaddingXl>
-          <HeadingContainer>
-            <Subheading>now</Subheading>
-            <Heading>looking for a reliable & stable partner?</Heading>
-            <Description>CONTACT US & LEARN MORE ABOUT US</Description>
-          </HeadingContainer>
-          <Button>Contact Us</Button>
-        </ContentWithPaddingXl>
-      </Overlay>
-    </Container>
+    <StyledContainer>
+      <GridColums className="container" between>
+        <Column>
+          <h3 className="heading">looking for a reliable & stable partner?</h3>
+          <p>Contact us and learn more about us</p>
+        </Column>
+        <Column className="short-column">
+          <PrimaryButton>Contact Us</PrimaryButton>
+        </Column>
+      </GridColums>
+    </StyledContainer>
   );
 };

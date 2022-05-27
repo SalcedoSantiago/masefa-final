@@ -26,9 +26,13 @@ export const SubTitle = styled(SectionDescription)`
     text-align: center;
 `
 
+export const Header = styled.div`
+padding: 60px 0px 25px 0px;
+`
 
 export const ThreeColumnContainer = styled(Columns)`
 gap: 1rem;
+padding-top: 0;
 `
 
 export const OverlayImage = styled.div`
@@ -45,7 +49,6 @@ export const OverlayImage = styled.div`
     }
 
 `
-
 
 export const CartContent = styled(motion.div)`
     /* padding: 2.5rem 2.5rem 3rem 2.5rem; */
@@ -80,28 +83,3 @@ export const CardDesc = styled.p`
     color: #FFFFFF;
 `
 
-
-
-
-
-/*
-*   Delete element
-*
-*/
-/* const Column = styled.div`
-  width: 50%;
-  padding: 2.5rem 2.5rem 3rem 2.5rem;
-  box-shadow: 0px 10px 50px 0px rgb(167 167 167 / 50%); 
-  border-style: solid;
-  border-bottom-width: 3px;
-  border-left: 2px solid #E2E8F0;
-  background-color: white;
-
-  &:first{
-    border-left:none;
-  }
-
-  @media (min-width: 1024px) {
-      width: calc(33% - 1.5rem);
-    }
-`; */

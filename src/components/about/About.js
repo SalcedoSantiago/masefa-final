@@ -1,84 +1,90 @@
 import React from "react";
 import styled from "styled-components";
+import { css } from "styled-components/macro"; //eslint-disable-line
 
 /**
  * Internal dependencies
  */
-import { SectionHeading, Subheading as SubheadingBase } from "../misc/Headings.js";
-import { SectionDescription } from '../misc/Typography';
+import { SectionHeading } from "../misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "../misc/Buttons.js";
-import { Container, Column, GridTwoColumns } from "../misc/Layouts";
+import { GridColums, Column } from "../misc/Layouts";
 
 
+const StyledSection = styled.section`
+    padding-top: 80px;
+    /* margin-bottom: 150px; */
 
-const ImageColumn = styled(Column)`
-    flex-shrink: 0;
-    position: relative;
-`;
+    img{
+        flex-shrink: 0;
+    }
+    .heading{
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: start;
+        }
+    }
+    .experiencie-container{
+        margin-top: 22px;
+        margin-bottom: 40px;
+        justify-content: start;
 
-const Image = styled.img`
-  box-shadow: 0px 10px 50px 0px rgb(167 167 167 / 50%);
-`
+        .experiencie{
+             padding-right: 20px;
 
-const TwoColumn = styled(GridTwoColumns)`
-    padding: 5rem 0;
-`
+            .counter{
+                display: block;
+                color: var(--orange);
+                font-size: 36px;
+                font-weight: 500;
+                margin-bottom: 8px;
+            }
 
-const Heading = styled(SectionHeading)`
-    font-size: 28px;
-    font-weight: 700;
-    /* margin-top: 1rem; */
-    text-align: center;
-    @media (min-width: 768px){
-        text-align: start;
+            h4{
+                color: var(--black);
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+        }
     }
 `
-const Subheading = styled(SubheadingBase)`
-    text-align: center;
-    @media (min-width: 768px) {
-        text-align: start ;
-    }
-`;
 
-const Description = styled(SectionDescription)`
-     text-align: center;
-     margin: 0;
-     font-size: 14px;
-    @media (min-width: 768px) {
-        text-align: start ;
-    }
-`
-
-const PrimaryButton = styled(PrimaryButtonBase)`
-    margin: 2rem auto auto;
-    display: block;
-    @media (min-width: 768px) {
-        margin-left: 0;
-        margin-right: 0;
-    }
-`
 
 export default () => {
-
     return (
-        <Container>
-            <TwoColumn>
-                <ImageColumn>
-                    <Image src="https://treact.owaiskhan.me/static/media/hero-screenshot-1.40a097b5.png" />
-                </ImageColumn>
+        <StyledSection>
+            <GridColums>
                 <Column>
-                    <Subheading>Our Expertise</Subheading>
-                    <Heading>
-                        Designed & Developed by <span tw="text-secondary-500">Professionals</span>
-                    </Heading>
-                    <Description>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </Description>
-                    <PrimaryButton href="/#we">
-                        Contact Us
-                    </PrimaryButton>
+                    <img alt="TEst" src="https://treact.owaiskhan.me/static/media/hero-screenshot-1.40a097b5.png" />
                 </Column>
-            </TwoColumn>
-        </Container>
+                <Column cols="2">
+                    <SectionHeading className="heading">
+                        Designed & Developed by <span tw="text-secondary-500">Professionals</span>
+                    </SectionHeading>
+                    <p>
+                        Welding is a fabrication process that joins materials, usually metals or thermoplastics, by using high heat to melt the parts together and allowing them to cool, causing fusion
+                    </p>
+
+                    <GridColums className="experiencie-container">
+                        <div className="experiencie">
+                            <span className="counter">17 +</span>
+                            <h4>Running Project</h4>
+                            <p>
+                                Welding is a fabrication process that joins materials, usually metals or thermoplastics,
+                            </p>
+                        </div>
+                        <div className="experiencie">
+                            <span className="counter">24</span>
+                            <h4>Running Project</h4>
+                            <p>
+                                Welding is a fabrication process that joins materials, usually metals or thermoplastics,
+                            </p>
+                        </div>
+                    </GridColums>
+                    <PrimaryButtonBase href="/#we">
+                        Contact Us
+                    </PrimaryButtonBase>
+                </Column>
+            </GridColums>
+        </StyledSection>
     );
 };

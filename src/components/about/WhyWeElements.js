@@ -61,10 +61,10 @@ export const QuestionTitle = styled.h3`
     font-weight: 700;
 `
 
-export const Answer = styled(motion.dd)`
-    color: #79787F;
-    font-size: 0.75rem;
-    pointer-events: none;
+export const Answer = styled(motion.p)`
+     color: #79787F;
+    font-size: 14px;
+    line-height: 1.8;
 `;
 
 
@@ -94,7 +94,7 @@ export const CardContent = styled.div`
         width: 100%;
         background-color: #FFFFFF;
         padding: 39px 35px 20px 35px;
-        border: 1px solid #E3E2E7;;
+        /* border: 1px solid #E3E2E7;; */
         border-radius:  2px;
 
         .icon{
@@ -120,4 +120,42 @@ export const CartDesc = styled.p`
     font-size: 0.75rem;
     margin-bottom: 1rem;
 
+`
+
+
+export const FeatureCotainer = styled.div`
+  padding: 0;
+  border: none;
+  width: 100%;
+  @media (min-width: 1024px) {
+      width: calc(50% - 1rem);
+  }
+
+  .columns{
+    ${({ theme }) => theme.mixins.flexStart};
+  }
+
+  svg{
+    width: 50px;
+    height: 50px;
+    color:#ff6c00;
+  }
+
+  .content{
+    width: 80%;
+  }
+
+  h3{
+    font-size: var(--fz-md);
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.44em;
+  }
+
+  p{
+    color: #79787F;
+    font-size: var(--fz-sm);
+    font-weight: 400;
+    line-height: 1.643em;
+  }
 `
