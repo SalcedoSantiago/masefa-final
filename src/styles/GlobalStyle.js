@@ -100,11 +100,7 @@ const GlobalStyle = createGlobalStyle`
     margin-right: 20px;
   }
 
-  img[alt=""],
-  img:not([alt]) {
-    filter: blur(5px);
-  }
-
+  
   svg {
     fill: currentColor;
     vertical-align: middle;

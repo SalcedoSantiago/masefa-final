@@ -1,12 +1,10 @@
-import { Hero, Services, GetStarted, Works, WhyWe, Footer, Features } from "../components";
-import About from "../components/about/About";
+import { Hero, Services, Testimonial, GetStarted, Works, WhyWe, Footer, Features, About } from "../components";
 import styled from "styled-components";
 
 
 const StyledMainContainer = styled.main`
   counter-reset: section;
 `;
-
 
 const Masefa = () => {
     return (
@@ -20,6 +18,7 @@ const Masefa = () => {
                 <WhyWe />
                 <GetStarted />
                 <Works />
+                <Testimonial />
                 {/* <TabCardThreeCol /> */}
                 <Footer />
                 {/* </AnimationRevealPage> */}

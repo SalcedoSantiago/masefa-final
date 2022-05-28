@@ -29,9 +29,15 @@ const Columns = styled.div`
       margin-top: 20px;
       background-color: white;
       color: var(--orange);
+
+      @media (min-width: 768px) {
+        margin-left: auto;
+      }
+   
     }
      
 `
+
 
 const StyledContainer = styled.div`
   margin: 30px 0;

@@ -13,6 +13,9 @@ const button = css`
   transition: var(--transition);
   padding: 5px 20px;
   letter-spacing: 0.65px;
+  width: 80%;
+  margin: 0 auto;
+  display: block;
 
 
   &:hover{
@@ -24,7 +27,21 @@ const button = css`
   &:after {
     display: none !important;
   }
+
+  @media (min-width: 768px) {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+   
+  @media (min-width: 1024px) {
+    width: auto;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
 `;
+
 
 const mixins = {
   flexCenter: css`

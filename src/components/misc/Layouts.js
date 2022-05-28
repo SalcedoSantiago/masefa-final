@@ -64,16 +64,27 @@ export const Column = styled.div`
 
 export const ThreeColumnContainer = styled.div`
 display: flex;
-flex-direction: column;
 align-items: center;
 flex-wrap: wrap;
 margin: 0 auto;
-gap: 1.5rem;
+gap: 1rem;
 
-@media (min-width: 1024px) {
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: center;
+> div {
+                width: 100%;
+        }
+
+@media (min-width: 768px) {
+
+        > div {
+            width: calc(50% - 1rem);
+        }
+    }
+
+    @media (min-width: 1024px) {
+
+> div {
+    width: calc(33% - 1rem);
+}
 }
 `;
 

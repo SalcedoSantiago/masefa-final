@@ -17,6 +17,7 @@ const Columns = styled.div`
     @media (min-width: 1024px) {
         padding: 0 ;
     }
+    
     .two-colunm{
         width: 100%;
         @media (min-width: 1024px) {
@@ -57,7 +58,7 @@ const StyledSection = styled.section`
 
 
         > div{
-            width: 50%;
+            width: 33%;
         }
 
         .experiencie{
@@ -78,15 +79,20 @@ const StyledSection = styled.section`
             .counter{
                 display: block;
                 color: var(--orange);
-                font-size: 36px;
+                font-size: 30px;
                 font-weight: 500;
                 margin-bottom: 8px;
             }
 
             h4{
                 color: var(--black);
-                font-size: 18px;
+                font-size: 16px;
                 text-transform: uppercase;
+            }
+            p{
+                font-size: 14px;
+                line-height: 1.3;
+                
             }
         }
     }
@@ -111,6 +117,13 @@ export default () => {
                     <div className="experiencie-container">
                         <div className="experiencie">
                             <span className="counter">17 +</span>
+                            <h4>Running Project</h4>
+                            <p>
+                                Welding is a fabrication process that joins materials, usually metals or thermoplastics,
+                            </p>
+                        </div>
+                        <div className="experiencie">
+                            <span className="counter">24</span>
                             <h4>Running Project</h4>
                             <p>
                                 Welding is a fabrication process that joins materials, usually metals or thermoplastics,

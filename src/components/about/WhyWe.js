@@ -25,7 +25,7 @@ import {
     QuestionTitle,
     FeatureCotainer
 } from './WhyWeElements'
-import { Columns } from "../works/WorksElements";
+// import { Columns } from "../works/WorksElements";
 
 
 const QuestionToggleIcon = motion(styled.span`
@@ -35,6 +35,17 @@ const QuestionToggleIcon = motion(styled.span`
   }
   
 `);
+
+const Columns = styled.div`
+    gap: 20px;
+    ${({ theme }) => theme.mixins.flexStart};
+    flex-direction: column;
+
+    >div{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+`
 
 
 export default () => {

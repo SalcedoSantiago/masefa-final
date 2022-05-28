@@ -23,6 +23,12 @@ const Columns = styled.div`
 `
 const StyledSection = styled.section`
     padding-top: 40px;
+    padding: 0 20px;
+
+    @media (min-width: 1024px) {
+        padding: 0 ;
+    }
+
     .header {
         text-align: center;
         margin-bottom: 40px;
@@ -55,14 +61,14 @@ background-color: #808080;
 `;
 
 const CardImageContainer = styled.div`
-${props => css`background-image: url("${props.imageSrc}");`}
-height: 18rem;
-align-items: center;
-flex-direction: column;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-background-size: cover;
+    ${props => css`background-image: url("${props.imageSrc}");`}
+    height: 18rem;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-size: cover;
 `;
 
 
