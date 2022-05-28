@@ -1,6 +1,5 @@
-import { Hero, Services, GetStarted, Works, WhyWe, Footer } from "../components";
+import { Hero, Services, GetStarted, Works, WhyWe, Footer, Features } from "../components";
 import About from "../components/about/About";
-import Features from "../components/features/Features";
 import styled from "styled-components";
 
 

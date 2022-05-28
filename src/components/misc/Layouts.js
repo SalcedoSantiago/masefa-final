@@ -22,14 +22,12 @@ export const GridColums = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    ${(props) => props.start && css` justify-content: start `};
 
     > div {
             width: 100%;
     }
- 
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
         flex-direction: row;
 
         > div {
@@ -56,7 +54,6 @@ export const GridTwoColumns = styled.div`
 `
 export const Column = styled.div`
     width: 100%;
-    padding: 0 6rem;
 
     @media (min-width: 768px) {
         width: 50%;

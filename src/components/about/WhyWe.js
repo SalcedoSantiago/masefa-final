@@ -33,6 +33,7 @@ const QuestionToggleIcon = motion(styled.span`
   svg {
     ${tw`w-6 h-6`}
   }
+  
 `);
 
 
@@ -91,7 +92,9 @@ export default () => {
                         {CARD.map(({ title, desc, Icon }, index) => (
                             <FeatureCotainer key={index}>
                                 <div className="columns">
-                                    <FaClock className="icon" />
+                                    <div>
+                                        <FaClock className="icon" />
+                                    </div>
                                     <div className="content">
                                         <h3>{title}</h3>
                                         <p>{desc}</p>

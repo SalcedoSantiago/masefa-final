@@ -68,18 +68,6 @@ export const Answer = styled(motion.p)`
 `;
 
 
-// const FAQ = tw.div`cursor-pointer select-none mt-5 px-8 sm:px-10 py-5 sm:py-4 rounded-lg  transition duration-300`;
-// const Question = tw.dt`flex justify-between items-center`;
-// const QuestionText = tw.span`text-lg lg:text-xl font-semibold`;
-// const QuestionToggleIcon = motion(styled.span`
-//   ${tw`ml-2 transition duration-300`}
-//   svg {
-//     ${tw`w-6 h-6`}
-//   }
-// `);
-
-
-
 /* 
 *   Card
 */
@@ -122,7 +110,6 @@ export const CartDesc = styled.p`
 
 `
 
-
 export const FeatureCotainer = styled.div`
   padding: 0;
   border: none;
@@ -132,24 +119,35 @@ export const FeatureCotainer = styled.div`
   }
 
   .columns{
-    ${({ theme }) => theme.mixins.flexStart};
+    display: flex;
+    flex-direction: column;
+    
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
   }
 
-  svg{
-    width: 50px;
-    height: 50px;
-    color:#ff6c00;
+  div{
+    margin-right: 15px;
+    svg{
+      margin: 0 auto;
+      width: 40px;
+      height: 40px;
+      color:#ff6c00;
+    }
   }
 
-  .content{
-    width: 80%;
-  }
 
   h3{
     font-size: var(--fz-md);
     font-weight: 500;
     text-transform: uppercase;
     line-height: 1.44em;
+    text-align: center;
+
+    @media (min-width: 768px) {
+    text-align: start;
+    }
   }
 
   p{
@@ -157,5 +155,10 @@ export const FeatureCotainer = styled.div`
     font-size: var(--fz-sm);
     font-weight: 400;
     line-height: 1.643em;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: start;
+    }
   }
 `
