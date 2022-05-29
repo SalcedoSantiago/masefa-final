@@ -1,4 +1,4 @@
-import { Hero, Services, Testimonial, GetStarted, Works, WhyWe, Footer, Features, About } from "../components";
+import { Hero, Services, Testimonial, GetStarted, Works, WhyWe, Footer, Features, About, Teams} from "../components";
 import styled from "styled-components";
 
 
@@ -20,7 +20,9 @@ const Masefa = () => {
                 <Works />
                 <Testimonial />
                 {/* <TabCardThreeCol /> */}
+                <Teams />
                 <Footer />
+
                 {/* </AnimationRevealPage> */}
             </StyledMainContainer>
         </>
