@@ -15,3 +15,4 @@ export { default as About } from './sections/About';
 export { default as GetStarted } from './sections/GetStarted';
 export { default as Works } from './sections/Works';
 export { default as Teams } from './teams/Teams';
+export { default as Contact } from './sections/Contact';

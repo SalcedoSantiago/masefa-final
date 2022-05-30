@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     min-height: 100%;
     overflow-x: hidden;
+    background-color: #F6F6F6;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     /* background-color: var(--blue); */

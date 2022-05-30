@@ -22,16 +22,15 @@ const Columns = styled.div`
 
 `
 const StyledSection = styled.section`
-    padding-top: 40px;
-    padding: 0 20px;
+    padding-top: 120px;
 
     @media (min-width: 1024px) {
-        padding: 0 ;
+        /* padding: 0 ; */
     }
 
     .header {
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
 
     .btn{
@@ -108,7 +107,7 @@ export default () => {
         <StyledSection>
             <div className="header">
                 <SectionHeading>
-                    Obras
+                    Nuestro trabajos
                 </SectionHeading >
                 <p>
                     The smartest working shop in the steel business

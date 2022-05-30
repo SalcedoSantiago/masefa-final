@@ -27,7 +27,7 @@ const Columns = styled.div`
 `
 
 const StyledSection = styled.section`
-    padding-top: 80px;
+    padding-top: 120px;
 
     img{
         flex-shrink: 0;

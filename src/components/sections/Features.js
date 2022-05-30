@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { SectionHeading } from '../misc/Headings'
 
 const SectionsStyled = styled.section`
+  padding: 125px 0 100px;
   .header{
     padding: 60px 0px 25px 0px;
 
